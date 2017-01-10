@@ -1,0 +1,71 @@
+Expectations from students:
+
+1. Read online documentation to figure out how stuff works
+2. Read published papers to understand mathematical concepts
+3. Experiment - Build on top of the base code (practice makes perfect)
+4. Collaborate among each other
+
+Pre-requisites:
+
+1. Complete Python course on Codecademy
+2. Complete SQL courses on Codecademy
+
+Agenda
+
+Warm Up (Feb): 
+
+1. Data Processing
+
+a. Pandas Dataframes
+b. Collections and Itertools
+c. Label Encoding
+d. Class balancing using SMOTE
+
+2. Intro to Azure SQL DB
+
+a. Create an free Azure account
+b. Spin up a Database instance on Azure
+c. Install required client tools and test connection to DB Server
+c. CREATE and INSERT values into tables (use data generated from Data Processing stage)
+d. Practice SELECT, WHERE, ORDER and JOIN statements
+
+Azure HDInsight
+
+1.HIVE (Feb):
+
+a. Provision a Spark Cluster
+b. Upload flat files from data processing stage to storage account
+c. Create HIVE tables
+d. Query HIVE tables
+
+2.SPARK (Feb):
+
+a. Integrate Spark with HIVE Tables
+b. Use Spark SQL to visualize results in Jupyter Notebooks
+c. Build two predictive models using the Spark ml library i)classification ii)regression
+
+3. SQOOP (Mar):
+
+a. Recap/Q&A Feb session
+b. Use SQOOP to import data from Database created earlier into the Spark Cluster
+c. Build HIVE Tables on the imported data
+d. Replicate Spark results on the imported data
+e. Export predictions to the SQL database
+
+4. Power BI (Mar):
+
+a. Create virtual machine (Linux systems), Windows users can download Power BI Desktop
+b. Connect to SQL Database/ Hive Tables to vsualize data
+
+5. OOZIE (Mar) - tentative:
+
+a. Automate the entire process Import Data from Azure SQL DB>Build Hive Tables>Build Predictive Models Using Spark>Export Results to Azure SQL DB
+
+FUTURE ADDITIONS:
+
+a. Streaming/Real-time analytics using HBase, Storm and Spark (Java/C# experience are pre-requisites)
+b. Serve Machine Learning models via APIs
+c. Deep Learning (ideally this should be spun off into a separate module/course)
+
+
+
