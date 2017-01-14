@@ -1,0 +1,6 @@
+labelID,category
+0,Never
+1,Once
+2,Twice
+3,Thrice
+4,4 or more times

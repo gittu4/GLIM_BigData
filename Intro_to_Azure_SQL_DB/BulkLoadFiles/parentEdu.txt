@@ -1,0 +1,6 @@
+labelID,category
+0,None
+1,Primary Education (4th grade)
+2,5th to 9th grade
+3,Secondary Education
+4,Higher Education

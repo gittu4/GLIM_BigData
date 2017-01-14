@@ -1,0 +1,5 @@
+labelID,category
+1,<15 min
+2,15 to 30 min
+3,30 min to 1 hour
+4,>1 hour

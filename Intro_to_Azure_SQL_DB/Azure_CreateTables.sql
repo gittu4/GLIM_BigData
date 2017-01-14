@@ -100,5 +100,8 @@ G3 INT NOT NULL,
 SmoteClass INT NOT NULL,
 );
 
+
 -- list tables in the Students database
 SELECT * FROM information_schema.tables WHERE TABLE_TYPE='BASE TABLE';
+
+SELECT * FROM Performance.StudentMaster;
