@@ -1,0 +1,6 @@
+hive -i wasb:///students/createTables.hql
+
+for client tools we can use Visual Studio, Hive CLI and Ambari views from the HD Insight dashboard
+
+http://www.slideshare.net/hortonworks/sql-to-hive
+
