@@ -1,67 +1,84 @@
 -- create a schema
+DROP SCHEMA IF EXISTS Performance;
 CREATE SCHEMA Performance;
 
 -- create required tables (discuss the decision of selecting INT data type in cases where BINARY could be used, ex. school and sex)
+DROP TABLE IF EXISTS Students.Performance.School;
 CREATE TABLE Students.Performance.School
 (LabelID INT PRIMARY KEY,
 Category VARCHAR(255) NOT NULL);
 
+DROP TABLE IF EXISTS Students.Performance.Sex;
 CREATE TABLE Students.Performance.Sex
 (LabelID INT PRIMARY KEY,
 Category VARCHAR(255) NOT NULL);
 
+DROP TABLE IF EXISTS Students.Performance.AddressType;
 CREATE TABLE Students.Performance.AddressType
 (LabelID INT PRIMARY KEY,
 Category VARCHAR(255) NOT NULL);
 
+DROP TABLE IF EXISTS Students.Performance.FamSize;
 CREATE TABLE Students.Performance.FamSize
 (LabelID INT PRIMARY KEY,
 Category VARCHAR(255) NOT NULL);
 
+DROP TABLE IF EXISTS Students.Performance.Pstatus;
 CREATE TABLE Students.Performance.Pstatus
 (LabelID INT PRIMARY KEY,
 Category VARCHAR(255) NOT NULL);
 
+DROP TABLE IF EXISTS Students.Performance.ParentEducation;
 CREATE TABLE Students.Performance.ParentEducation
 (LabelID INT PRIMARY KEY,
 Category VARCHAR(255) NOT NULL);
 
+DROP TABLE IF EXISTS Students.Performance.ParentJob;
 CREATE TABLE Students.Performance.ParentJob
 (LabelID INT PRIMARY KEY,
 Category VARCHAR(255) NOT NULL);
 
+DROP TABLE IF EXISTS Students.Performance.Reason;
 CREATE TABLE Students.Performance.Reason
 (LabelID INT PRIMARY KEY,
 Category VARCHAR(255) NOT NULL);
 
+DROP TABLE IF EXISTS Students.Performance.Guardian;
 CREATE TABLE Students.Performance.Guardian
 (LabelID INT PRIMARY KEY,
 Category VARCHAR(255) NOT NULL);
 
+DROP TABLE IF EXISTS Students.Performance.Traveltime;
 CREATE TABLE Students.Performance.TravelTime
 (LabelID INT PRIMARY KEY,
 Category VARCHAR(255) NOT NULL);
 
+DROP TABLE IF EXISTS Students.Performance.Studytime;
 CREATE TABLE Students.Performance.StudyTime
 (LabelID INT PRIMARY KEY,
 Category VARCHAR(255) NOT NULL);
 
+DROP TABLE IF EXISTS Students.Performance.Failures;
 CREATE TABLE Students.Performance.Failures
 (LabelID INT PRIMARY KEY,
 Category VARCHAR(255) NOT NULL);
 
+DROP TABLE IF EXISTS Students.Performance.BadtoExcellent;
 CREATE TABLE Students.Performance.BadtoExcellent
 (LabelID INT PRIMARY KEY,
 Category VARCHAR(255) NOT NULL);
 
+DROP TABLE IF EXISTS Students.Performance.LowtoHigh;
 CREATE TABLE Students.Performance.LowtoHigh
 (LabelID INT PRIMARY KEY,
 Category VARCHAR(255) NOT NULL);
 
+DROP TABLE IF EXISTS Students.Performance.SmoteClass;
 CREATE TABLE Students.Performance.SmoteClass
 (LabelID INT PRIMARY KEY,
 Category VARCHAR(255) NOT NULL);
 
+DROP TABLE IF EXISTS Students.Performance.StudentMaster;
 CREATE TABLE Students.Performance.StudentMaster
 (StudentID INT PRIMARY KEY,
 School INT NOT NULL,
