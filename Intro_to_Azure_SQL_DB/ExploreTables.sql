@@ -57,7 +57,9 @@ SELECT a.G3 AS Score, b.HighestQualifiedParent, c.Qualification
 --returning the first 5 rows from the view created
 SELECT TOP 5 * FROM Performance.vHighestQualifiedParent;
 
---use the view to calculate summary stats
+--use the view to  create another view for summary stats
+CREATE VIEW Performance.vSummaryStats
+AS
 SELECT a.HighestQualifiedParent, a.Qualification,
     a.MinScore, a.AvgScore,
     b.MedianScore as MedianScore, a.MaxScore,
@@ -78,6 +80,10 @@ JOIN
                 Qualification) AS MedianScore
         FROM Performance.vHighestQualifiedParent) AS b
 ON a.HighestQualifiedParent = b.HighestQualifiedParent AND
-a.Qualification = b.Qualification
-ORDER BY a.HighestQualifiedParent, a.Qualification;
+a.Qualification = b.Qualification;
+
+--return results from the view
+--order by cannot be used to create a view but can be used in SELECT
+SELECT * FROM Performance.vSummaryStats
+ORDER BY HighestQualifiedParent, Qualification;
 
