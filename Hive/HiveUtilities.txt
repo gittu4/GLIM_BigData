@@ -3,4 +3,9 @@ hive -i wasb:///students/createTables.hql
 for client tools we can use Visual Studio, Hive CLI and Ambari views from the HD Insight dashboard
 
 http://www.slideshare.net/hortonworks/sql-to-hive
+https://docs.treasuredata.com/articles/hive-aggregate-functions
+
+Return column headers in hive shell
+
+set hive.cli.print.header=true;
 

@@ -87,3 +87,45 @@ a.Qualification = b.Qualification;
 SELECT * FROM Performance.vSummaryStats
 ORDER BY HighestQualifiedParent, Qualification;
 
+--cartesian join the results of which we will use to demonstrate
+--hive partitioned tables
+--be prepared to wait while this runs
+SELECT a.StudentID, a.SmoteClass 
+FROM Performance.StudentMaster AS a
+CROSS JOIN
+(SELECT b.SmoteClass,
+b.School,
+b.Sex,
+b.Age,
+b.AddressType,
+b.FamSize,
+b.Pstatus,
+b.Medu,
+b.Fedu,
+b.Mjob,
+b.Fjob,
+b.Reason,
+b.Guardian,
+b.Traveltime,
+b.Studytime,
+b.Failures,
+b.Schoolsup,
+b.Famsup,
+b.Paid,
+b.Activities,
+b.Nursery,
+b.Higher,
+b.Internet,
+b.Romantic,
+b.FamRel,
+b.FreeTime,
+b.GoOut,
+b.Dalc,
+b.Walc,
+b.Health,
+b.Absences,
+b.G1,
+b.G2,
+b.G3
+FROM Performance.StudentMaster as b) as c;
+
