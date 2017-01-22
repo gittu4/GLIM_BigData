@@ -2,7 +2,7 @@
 DROP SCHEMA IF EXISTS Performance;
 CREATE SCHEMA Performance;
 
--- create required tables (discuss the decision of selecting INT data type in cases where BINARY could be used, ex. school and sex)
+-- create required tables (discuss the decision of selecting INT data type in cases where INT could be used, ex. school and sex)
 DROP TABLE IF EXISTS Students.Performance.School;
 CREATE TABLE Students.Performance.School
 (LabelID INT PRIMARY KEY,
@@ -96,14 +96,14 @@ Guardian INT NOT NULL,
 Traveltime INT NOT NULL,
 Studytime INT NOT NULL,
 Failures INT NOT NULL,
-Schoolsup BINARY NOT NULL,
-Famsup BINARY NOT NULL,
-Paid BINARY NOT NULL,
-Activities BINARY NOT NULL,
-Nursery BINARY NOT NULL,
-Higher BINARY NOT NULL,
-Internet BINARY NOT NULL,
-Romantic BINARY NOT NULL,
+Schoolsup INT NOT NULL,
+Famsup INT NOT NULL,
+Paid INT NOT NULL,
+Activities INT NOT NULL,
+Nursery INT NOT NULL,
+Higher INT NOT NULL,
+Internet INT NOT NULL,
+Romantic INT NOT NULL,
 FamRel INT NOT NULL,
 FreeTime INT NOT NULL,
 GoOut INT NOT NULL,
