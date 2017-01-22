@@ -1,6 +1,7 @@
 -- create a schema
 DROP SCHEMA IF EXISTS Performance;
 CREATE SCHEMA Performance;
+GO
 
 -- create required tables (discuss the decision of selecting INT data type in cases where INT could be used, ex. school and sex)
 DROP TABLE IF EXISTS Students.Performance.School;
@@ -116,7 +117,7 @@ G2 INT NOT NULL,
 G3 INT NOT NULL,
 SmoteClass INT NOT NULL,
 );
-
+GO
 
 -- list tables in the Students database
 SELECT * FROM information_schema.tables WHERE TABLE_TYPE='BASE TABLE';
