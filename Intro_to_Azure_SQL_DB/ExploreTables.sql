@@ -30,7 +30,7 @@ FROM
 --making life easier by creating a view for highest qualified parent
 CREATE VIEW Performance.vHighestQualifiedParent
 AS
-SELECT a.G3 AS Score, b.HighestQualifiedParent, c.Qualification
+SELECT a.StudentID AS StudentID, a.G3 AS Score, b.HighestQualifiedParent, c.Qualification
     --create highest qualifaction column
     FROM Performance.StudentMaster AS a JOIN
                 (SELECT StudentID, "HighestQualifiedParent" =
