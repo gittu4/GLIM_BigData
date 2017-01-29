@@ -67,7 +67,7 @@ SELECT a.HighestQualifiedParent, a.Qualification,
 FROM
 --group by required to return summarized rows
     (SELECT c.HighestQualifiedParent, c.Qualification,
-    MIN(c.Score) AS MinScore, AVG(c.Score) AS AvgScore,
+    MIN(c.Score) AS MinScore, CONVERT(FLOAT,AVG(c.Score)) AS AvgScore,
     MAX(c.Score) AS MaxScore,
     STDEV(c.Score) as StdDev
     FROM Performance.vHighestQualifiedParent AS c
@@ -75,9 +75,9 @@ FROM
 JOIN
 --calcuating the median
     (SELECT DISTINCT HighestQualifiedParent, Qualification,
-        PERCENTILE_DISC(0.5) WITHIN GROUP (ORDER BY Score)   
+        CONVERT(FLOAT,PERCENTILE_DISC(0.5) WITHIN GROUP (ORDER BY Score)   
                 OVER (PARTITION BY HighestQualifiedParent, 
-                Qualification) AS MedianScore
+        Qualification)) AS MedianScore
         FROM Performance.vHighestQualifiedParent) AS b
 ON a.HighestQualifiedParent = b.HighestQualifiedParent AND
 a.Qualification = b.Qualification;
